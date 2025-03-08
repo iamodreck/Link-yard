@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href="../LinkYard.css" rel="stylesheet">
+    <title>Link Yard / Delete Account</title>
+</head>
+<body>
+
+    <form action="" method="post">
+        <video id="Ad_for_upper_billboard" src= <%= Current_ads.Ad_for_upper_billboard.Path_2_Ad %> loop autoplay muted ></video>
+        <textarea name="Advert" hidden ><%= JSON.stringify( [Current_ads.Ad_for_upper_billboard.Billboard, Current_ads.Ad_for_upper_billboard.ID] ) %></textarea>
+        <button class="Link_2_more_info"> Click here for more information </button>
+    </form>
+
+<p class="Title">Link Yard Delete </p>
+<h4>Incase you have any issues or complaints , you can reach out to any of our contact portals and tell us where you feel you're experiencig difficulty in using Link Yard..The information you provide will be of much importance to us</h4>
+<button>Contact us</button>
+
+<form action="" method="post">
+    <video id="Ad_for_middle_billboard" src= <%= Current_ads.Ad_for_middle_billboard.Path_2_Ad %> loop autoplay muted ></video>
+    <textarea name="Advert" hidden ><%= JSON.stringify( [Current_ads.Ad_for_middle_billboard.Billboard, Current_ads.Ad_for_middle_billboard.ID] ) %></textarea>
+    <button class="Link_2_more_info"> Click here for more information </button>
+</form>
+
+<h3>To delete your account, enter your password</h3>
+<form action="" method="post">
+
+<input type="password" name="DAP">
+<br>
+<br>
+<button >Delete Account</button>
+</form>
+
+<form action="" method="post">
+    <video id="Ad_for_lower_billboard" src= <%= Current_ads.Ad_for_lower_billboard.Path_2_Ad %> loop autoplay muted ></video>
+    <textarea name="Advert" hidden ><%= JSON.stringify( [Current_ads.Ad_for_lower_billboard.Billboard, Current_ads.Ad_for_lower_billboard.ID] ) %></textarea>
+    <button class="Link_2_more_info"> Click here for more information </button>
+</form>
+
+<script type="text/javascript" src="Script.js" ></script>
+</body>
+</html>

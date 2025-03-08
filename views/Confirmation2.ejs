@@ -1,0 +1,75 @@
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="description" content="">
+   <meta name="keywords" content="">
+   <link href="../LinkYard.css" rel="stylesheet">
+   <title>Link Yard | Confirmation</title>
+   <style> p{ font-size: 30px; text-align: center;} </style>
+</head>
+<body>
+
+  <form action="" method="post">
+      <video id="Ad_for_upper_billboard" src= <%= Current_ads.Ad_for_upper_billboard.Path_2_Ad %> loop autoplay muted ></video>
+      <textarea name="Advert" hidden ><%= JSON.stringify( [Current_ads.Ad_for_upper_billboard.Billboard, Current_ads.Ad_for_upper_billboard.ID] ) %></textarea>
+      <button class="Link_2_more_info"> Click here for more information </button>
+  </form>
+
+    <P class="Title" id="Subject"> <%= Subject %> </P>
+
+    <form action="" method="post">
+      <input type="hidden" name="Which_form" value="form_1">
+       <p>Enter the code sent to <%= Identifier %> </p>
+       <p> <input placeholder="Enter code here" required name="Code"> </p>
+
+      <div style="display: none;" id="CPB">
+         <p style="font-size: 20px; line-height: 0;"> Enter new Password </p>
+         <p> <input type="text" id="PW1" name="pw1"> </p>
+         <p style="font-size: 20px; line-height: 0;" > Re-enter new Password </p>
+         <p><input type="text" name="pw2"> </p>
+      </div>
+
+       <p> <button>Confirm</button> </p>
+
+    </form>
+
+    <form action="" method="post">
+      <video id="Ad_for_middle_billboard" src= <%= Current_ads.Ad_for_middle_billboard.Path_2_Ad %> loop autoplay muted ></video>
+      <textarea name="Advert" hidden ><%= JSON.stringify( [Current_ads.Ad_for_middle_billboard.Billboard, Current_ads.Ad_for_middle_billboard.ID] ) %></textarea>
+      <button class="Link_2_more_info"> Click here for more information </button>
+  </form>
+
+    <form action="" method="post">
+      <input type="hidden" name="Which_form" value="form_2">
+      <p>Incase you have not received the confirmation code, click the button below to get a new one but once you request for a new code, all the other previosly requested codes on the same Subject will become expire and wrong</p>
+      <p> <button type="submit">Get new code</button> </p>
+    </form>
+
+    <form action="" method="post">
+      <video id="Ad_for_lower_billboard" src= <%= Current_ads.Ad_for_lower_billboard.Path_2_Ad %> loop autoplay muted ></video>
+      <textarea name="Advert" hidden ><%= JSON.stringify( [Current_ads.Ad_for_lower_billboard.Billboard, Current_ads.Ad_for_lower_billboard.ID] ) %></textarea>
+      <button class="Link_2_more_info"> Click here for more information </button>
+  </form>
+
+    <script type="text/javascript" src="../Script.js" ></script>
+    <script>
+
+   switch (Subject.innerHTML) {
+      case " Account Verification ":
+      alert("You have 5 minutes to complete this verification or else the code will expire and you'll have to Sign Up again")
+         break;
+   
+      case " Password Reset ":
+      CPB.style.display = "block"
+      PW1.required = true
+         break;
+
+      default:
+         null
+         break;   
+   }
+
+ </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+  <title>Link Yard / Preview</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <link href="/LinkYard.css" rel="stylesheet">
+  <script type="text/javascript" src="/Script.js" ></script>
+
+</head>
+ <body>
+
+  <form action="" method="post">
+    <video id="Ad_for_upper_billboard" src= <%= Current_ads.Ad_for_upper_billboard.Path_2_Ad %> loop autoplay muted ></video>
+    <textarea name="Advert" hidden ><%= JSON.stringify( [Current_ads.Ad_for_upper_billboard.Billboard, Current_ads.Ad_for_upper_billboard.ID] ) %></textarea>
+    <button class="Link_2_more_info"> Click here for more information </button>
+  </form>
+  
+<div>
+  <img src="/Media/Icons/Menu.jpg" alt="Menu Icon" onclick="ChangeVisibility()" id="MenuIcons"> <span class="Title" style="color: black;" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= User_object.User_name %> </span>
+
+    
+       <br>
+       <div id="MenuOptions">
+        <a href="SignUp" class="Menu">Sign Up <br></a>
+        <a href="SignIn" class="Menu"> Sign In / Log In . <br></a>
+        <a href="Inquries" class="Menu">Help / Inquries <br></a>
+        <a class="Menu">Share <br></a>
+       </div>
+       <br>
+
+    <form action="" method="post">
+        <video id="Ad_for_middle_billboard" src= <%= Current_ads.Ad_for_middle_billboard.Path_2_Ad %> loop autoplay muted ></video>
+        <textarea name="Advert" hidden ><%= JSON.stringify( [Current_ads.Ad_for_middle_billboard.Billboard, Current_ads.Ad_for_middle_billboard.ID] ) %></textarea>
+        <button class="Link_2_more_info"> Click here for more information </button>
+    </form>
+
+     <div id="LinksBlock">
+        <% if (NormalLinks.length > 0) {  NormalLinks.forEach(Link => {   %> <img <% var A = Link.Href; var B = A.indexOf("."); var C = A.slice(0,B) %>  src="/Media/Icons/<%=C%>.png" id="LinkIcons" > <form action="" method="post" id="LinkForm"> <input type="text" class="LinkValues" value="https://<%= Link.Href %>"  name ="Title" > <button class="Links"> <%= Link.Title %> </button> </form><br><br> <% } ) } %>
+        <% if (CustomLinks.length > 0) {  CustomLinks.forEach(Link => {   %> <img src="/Media/Icons/CustomLink.png" id="LinkIcons" > <form action="" method="post" id="LinkForm"> <input type="text" class="LinkValues" value=<%= Link.Href %> name ="Title" > <button class="Links"> <%= Link.Title %> </button> </form><br><br> <% } ) } %>
+      </div>
+
+
+                                                                                                                         
+                                         
+    
+  </div>
+
+  <form action="" method="post">
+    <video id="Ad_for_lower_billboard" src= <%= Current_ads.Ad_for_lower_billboard.Path_2_Ad %> loop autoplay muted ></video>
+    <textarea name="Advert" hidden ><%= JSON.stringify( [Current_ads.Ad_for_lower_billboard.Billboard, Current_ads.Ad_for_lower_billboard.ID] ) %></textarea>
+    <button class="Link_2_more_info"> Click here for more information </button>
+</form>
+
+</body>
+</html>

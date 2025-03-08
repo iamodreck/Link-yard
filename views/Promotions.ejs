@@ -1,0 +1,76 @@
+<html lang="en">
+<head>
+    <title>Link Yard / Promotions</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href="../LinkYard.css" rel="stylesheet">
+</head>
+<body>
+
+    <form action="" method="post">
+        <video id="Ad_for_upper_billboard" src= <%= Current_ads.Ad_for_upper_billboard.Path_2_Ad %> loop autoplay muted ></video>
+        <textarea name="Advert" hidden ><%= JSON.stringify( [Current_ads.Ad_for_upper_billboard.Billboard, Current_ads.Ad_for_upper_billboard.ID] ) %></textarea>
+        <button class="Link_2_more_info"> Click here for more information </button>
+    </form>
+
+    <p class="Title">Link Yard Promotions</p>
+
+    <span>Incase you are new to LinkYard Advetisements / Promotions</span>
+    <br>
+    <a href="Inquries/#Promotions">Click here to know more</a>
+    <br><br>
+
+    <span class="SettingsBlock" style="font-size: 25px;">* Running Advert / Promotion </span>
+    <br><br>
+
+    <form action="" method="post" enctype="multipart/form-data">
+        <span style="font-size: 25px;" >*Choose Promotion Billboard</span>
+      
+        <select name="AdvertisementBillBoard" >
+            <option value="Upper_Billboard">Upper Billboard</option>
+            <option value="Middle_Billboard">Middle Billboard</option>
+            <option value="Lower_Billboard">Lower Billboard</option>
+            <option value="Email_Billboard">Email Billboard</option>
+
+        </select>
+        <br><br>
+    
+        <span style="font-size: 25px;">*Time Period:&nbsp;</span> 
+        <select name="TimePeriod" > 
+            <option value="1_Day">1 Day ( 24 hours ) </option>
+            <option value="7_Days">1 week ( 7 Days) </option>
+        </select>
+        <br><br>
+    
+        <span style="font-size: 25px;" >*Link more information about your advert: </span><input name="ProductLink" type="text" placeholder="Optional">
+        <br><br>
+         
+        <input type="file" name="file" required>
+
+        <form action="" method="post">
+            <video id="Ad_for_middle_billboard" src= <%= Current_ads.Ad_for_middle_billboard.Path_2_Ad %> loop autoplay muted ></video>
+            <textarea name="Advert" hidden ><%= JSON.stringify( [Current_ads.Ad_for_middle_billboard.Billboard, Current_ads.Ad_for_middle_billboard.ID] ) %></textarea>
+            <button class="Link_2_more_info"> Click here for more information </button>
+        </form>
+
+        <span>Note that the pricing will be dertermined by the Billboard and Time period you choose</span> 
+        <br>
+        <a href="Inquries/#PromotionsTable">Click here to find pricing</a>
+        <br><br>
+    
+        <button>Choose payment method</button>
+        <br> <br>
+    </form>
+
+
+    <form action="" method="post">
+        <video id="Ad_for_lower_billboard" src= <%= Current_ads.Ad_for_lower_billboard.Path_2_Ad %> loop autoplay muted ></video>
+        <textarea name="Advert" hidden ><%= JSON.stringify( [Current_ads.Ad_for_lower_billboard.Billboard, Current_ads.Ad_for_lower_billboard.ID] ) %></textarea>
+        <button class="Link_2_more_info"> Click here for more information </button>
+    </form>
+        
+     <script type="text/javascript" src="Script.js" ></script>
+ </body>
+</html>

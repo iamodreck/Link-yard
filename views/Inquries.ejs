@@ -1,0 +1,186 @@
+<html lang="en">
+<head>
+    <title>Link Yard / Inquries & Help</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href="../LinkYard.css" rel="stylesheet">
+</head>
+<body>
+
+    <form action="" method="post">
+        <video id="Ad_for_upper_billboard" src= <%= Current_ads.Ad_for_upper_billboard.Path_2_Ad %> loop autoplay muted ></video>
+        <textarea name="Advert" hidden ><%= JSON.stringify( [Current_ads.Ad_for_upper_billboard.Billboard, Current_ads.Ad_for_upper_billboard.ID] ) %></textarea>
+        <button class="Link_2_more_info"> Click here for more information </button>
+    </form>
+
+    <p class="Title">Help & Inquries</p>
+    
+        <h2> *Announcements* </h2>
+        This section is preserved for link Yard Announcements 
+        
+        <h2>*Intro: What is Link Yard ?* </h2>
+        Hello there, welcome to Link Yard.
+        Incase you're wondering what link Yard is, we are a link collection site.We are hopping that you've ever head of the term "Link in bio", well this is one of the services which make that statement come to life as we offer a dedicated platform for you to display all your links in one place so that people can check them out at once and this is all done at an almost at no fee. There are other services which offer the same function but using Link Yard comes with a number of added advantages which you'll find out below.
+        But to enjoy all this services , make sure you have an account with Link Yard.
+        to find out more, check our <br><a href="LinkYard">HOME PAGE</a>  
+        
+        
+        <h2>*Stats / Analysis*</h2>
+        Collecting your links on link Yard is a great thing but what makes it more interesting is that you canemonitthe performance of your account though different methods such as knowing how many people having clicked your links for the Day  this come with more dissected sectors such as clicks per hour and per minute.
+        We also working on adding more analysis features to your account and we'll inform you as they are ready, just stick around.
+        All the stats / Analysis can be found at the <br><a href="Analysis">STATS / ANALYSIS PAGE</a>
+        
+        
+        <h2>* Increase your stats * </h2>
+        Having big numbers on your analysis page is something that would make every link Yard user happy and Incase you feel that the numbers you have are not enough, Link Yard gives you a chance to boost your stats though Link Yard Promotions  through promotions  your link gets shown to visitors and link Yard users all over he world just like how it appears on the top and and bottom of this page
+        Try <br> <a href="Promotions">PROMOTIONS / ADVERTISEMENTS</a> toDay 
+        
+        
+        <h2>*Updating / Deleting links*</h2>
+        At link Yard, unfortunately you cannot directly change the content of a link once it set but incase you want to update your link, you can delete it and create another one .
+        All this can be archived at the <br> <a href="Account">ACCOUNT DETAILS</a> page
+        
+        <h2>* Adding Link *</h2>
+        Incase you want to add a link to your Link Yard, got to your <br><a href="Profile">PROFILE PAGE</a>, click on the menu icon in the top left corner and then select *Add link* .
+        
+        <h2>* Custom Link Name *</h2>
+        The links you add come with default headers but In case you want your link to have a different heading or customized header, enter your heading choice in the customized link name option and If you don't want your link to have a custom name, leave the custom link name empty. 
+        All this is found on the
+        
+        <h2>* Share your Link Yard *</h2>
+        Incase you want to share you link Yard to other social media platforms so that users can use your link to view all your links , got to the <a href="Profile">PROFILE PAGE</a>and in the top left corner , tap the menu icon.
+        From there , you can choose to copy your link and manually share it or you can choose from the available options Incase you want to create a post about your link Yard in the different social media apps available in the choice.
+        
+        
+        <h2>* Preview *</h2>
+        Incase you're asking your self how you link Yard looks like to your visitors, go to your <a href="Profile">PROFILE PAGE</a> and in the top left corner, click the menu Icon and select the preview option.
+        You'll be directed to your preview page and I'd you look closely , you'll notice that this is your Link Yard (link) and it's exactly how your visitors view your link Yard.
+        
+        
+        
+        <h2>* Delete Account *</h2>
+        Incase you want to delete your Link Yard account , go to <a href="Settings">SETTINGS PAGE</a> > <a href="Account">ACCOUNT DETAILS</a> and scroll to the bottom
+        But incase you have any complaint which is making you unfortable with using Link Yard, you can message us and this can be archived at the *Profile Page* In the too left corner, click the menu icon and the select raise a concern , this will help us to improve link Yard to all uses around the world 
+        
+        
+        <h2 id="Promotions">* Advertise / Promote on Link Yard *</h2>
+        Incase your looking for a platform to use  so that your reach to many individuals around the world so that you exhibit your products and services, well Link Yard is one of the best places for that as we give you a platform to show the world your services and product and this all comes at an affordable cost..
+        You should also note that the prices of the advertisements varry according to the billboard you want to use i.e the Upper billboard  or the Lower billboard 
+        Both these billboard come in packages of Daily, Weekly and Monthly.
+        Check the table below to know the corresponding pricing.
+        
+        
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Upper billboard</th>
+                    <th>Middle billboard</th>
+                    <th>Lower billboard</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1 Day budget</td>
+                    <td><%= Details_for_advert_info_table.Daily_Budget.Upper_Billboard %></td>
+                    <td><%= Details_for_advert_info_table.Daily_Budget.Middle_Billboard %></td>
+                    <td><%= Details_for_advert_info_table.Daily_Budget.Lower_Billboard %></td>
+                </tr>
+                <tr>
+                    <td>7 Days budget</td>
+                    <td><%= Details_for_advert_info_table.Weekly_Budget.Upper_Billboard %></td>
+                    <td><%= Details_for_advert_info_table.Weekly_Budget.Middle_Billboard %></td>
+                    <td><%= Details_for_advert_info_table.Weekly_Budget.Lower_Billboard %></td>
+                </tr>
+                <tr>
+                    <td>Size</td>
+                    <td>x</td>
+                    <td>0.75x</td>
+                    <td>0.5x</td>
+                </tr>
+                <tr>
+                    <td>Time play /hour</td>
+                    <td><%= Details_for_advert_info_table.Plays_per_hour.Upper_Billboard %> minutes</td>
+                    <td><%= Details_for_advert_info_table.Plays_per_hour.Middle_Billboard %> minutes</td>
+                    <td><%= Details_for_advert_info_table.Plays_per_hour.Lower_Billboard %> minutes</td>
+                </tr>
+                <tr>
+                    <td>Number of plays /hour</td>
+                    <td><%= Details_for_advert_info_table.Plays_per_hour.Upper_Billboard %> plays</td>
+                    <td><%= Details_for_advert_info_table.Plays_per_hour.Middle_Billboard %> plays</td>
+                    <td><%= Details_for_advert_info_table.Plays_per_hour.Lower_Billboard %> plays</td>
+                </tr>
+                <tr>
+                    <td>Rate of play</td>
+                    <td>1 play /<%= 60 / Details_for_advert_info_table.Plays_per_hour.Upper_Billboard %> minutes</td>
+                    <td>1 play /<%= 60 / Details_for_advert_info_table.Plays_per_hour.Middle_Billboard %> minutes</td>
+                    <td>1 play /<%= 60 / Details_for_advert_info_table.Plays_per_hour.Lower_Billboard %> minutes</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        The following are the guidelines to follow Incase you want to advertise / Promote with LinkYard.
+        When processing an advert or promotion with LinkYard, you're required to submit in a link a video representation of your video (For now , We recommend to use a YouTube link )
+        Incase you don't have any of the above talked about, let's take you through the steps to archive that.
+
+        <h6>°1</h6> Create a video representation of your content / advert. This can be archived through use of different video making software (  Try googling ).
+        Try to make your video of small sizing as possible because heavy sized videos are not easy to load on every device due to differences in network varriations varrying on devices using Link Yard .
+        You should also note that your video should be maximumly 30 seconds long
+        
+        
+        <h6>°2</h6>At this step, we are assuming that you already have your video representation of your product or service already in place.
+        The next step is now to upload it on a video hosting platform 
+        (For now , We recommend to use  YouTube  ) and once it's fully uploaded , you should test if it's playing well on the  platform you've uploaded it to.
+        
+        
+        <h6>°3</h6>After you're done with all the above steps, now copy the link associates wittyour video from the video hosting platform your using.
+        
+        <form action="" method="post">
+            <video id="Ad_for_middle_billboard" src= <%= Current_ads.Ad_for_middle_billboard.Path_2_Ad %> loop autoplay muted ></video>
+            <textarea name="Advert" hidden ><%= JSON.stringify( [Current_ads.Ad_for_middle_billboard.Billboard, Current_ads.Ad_for_middle_billboard.ID] ) %></textarea>
+            <button class="Link_2_more_info"> Click here for more information </button>
+        </form>
+
+        <h6>°4</h6>With the above steps, you're a step closer to finalizing the promotion  / Advertisement process with Link Yard and you should now be able to follow the next steps.
+        
+        
+        <h6>°5</h6>*When submitting your promotion / Advert, you also have an option to also submit an additional link which Will direct people to your product or service . This can a be your website or social media page for your product or service but this is optional.
+        
+        Note that you should be careful when filling the Advert / Promotion form so that you do not interchange these links ( you should make sure you put each link in it's respecting) because when you do so, the campaign maybe less effective and once you submit the form, there's no changing the details 
+        
+        After all the above, chose your preferred payment options and you'll be let know when your advert will be active. 
+        Your video shows 240 times a Day on any billboard of your choosing 
+        
+        
+        
+        <h2>* Disable notifications *</h2>
+        Incase you want to stop receiving notifications from Link Yard, go to *Settings* and that's where you'll find the notification options.
+        Note that when you disable notifications, you may miss out on nee updates regarding Link Yard.
+        
+        
+        
+        <h2>* Updating / Changing account details *</h2>
+        Incase you want to change account details like username, email, phone number or password , you can got to the *Account Details page* and that's where you can ankle these changes but remember that got any change you make , you'll be required to enter your current password and failure to do so, the details won't change
+        
+        
+        
+        
+        <h2>* Suggesting any features / Raising a complain *</h2>
+        Incase you want to suggest any new feature at LinkYard or raise a complaint, reach out to us through the box below
+        <form action="" method="post">
+            <input type="text">
+        </form>
+        
+
+   
+        <form action="" method="post">
+            <video id="Ad_for_lower_billboard" src= <%= Current_ads.Ad_for_lower_billboard.Path_2_Ad %> loop autoplay muted ></video>
+            <textarea name="Advert" hidden ><%= JSON.stringify( [Current_ads.Ad_for_lower_billboard.Billboard, Current_ads.Ad_for_lower_billboard.ID] ) %></textarea>
+            <button class="Link_2_more_info"> Click here for more information </button>
+        </form>
+    
+     <script type="text/javascript" src="Script.js" ></script>
+    </body>
+</html>

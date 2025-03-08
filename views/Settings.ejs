@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <title>Link Yard / Settings</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href="../LinkYard.css" rel="stylesheet">
+</head>
+<body>
+
+    <form action="" method="post">
+        <video id="Ad_for_upper_billboard" src= <%= Current_ads.Ad_for_upper_billboard.Path_2_Ad %> loop autoplay muted ></video>
+        <textarea name="Advert" hidden ><%= JSON.stringify( [Current_ads.Ad_for_upper_billboard.Billboard, Current_ads.Ad_for_upper_billboard.ID] ) %></textarea>
+        <button class="Link_2_more_info"> Click here for more information </button>
+    </form>
+
+    <p class="Title">Link Yard Settings</p>
+    
+     <p><a href="/DeleteAccount" class="SettingsBlock" >* Delete Account</a></p>
+     <p><a href="/Promotions" class="SettingsBlock" >* Link Yard Promotions</a></p>
+     <p><a href="/Account" class="SettingsBlock" >* Account Details</a></p>
+     <p><span class="SettingsBlock" >* Allow notifications</span> <input type="checkbox" name="AEN" id="AEN">
+<br><br>
+        
+    
+<form action="" method="post">
+    <video id="Ad_for_lower_billboard" src= <%= Current_ads.Ad_for_lower_billboard.Path_2_Ad %> loop autoplay muted ></video>
+    <textarea name="Advert" hidden ><%= JSON.stringify( [Current_ads.Ad_for_lower_billboard.Billboard, Current_ads.Ad_for_lower_billboard.ID] ) %></textarea>
+    <button class="Link_2_more_info"> Click here for more information </button>
+</form>
+        
+ <script type="text/javascript" src="Script.js" ></script>
+</body>
+</html>

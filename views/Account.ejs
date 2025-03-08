@@ -1,0 +1,94 @@
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="description" content="">
+   <meta name="keywords" content="">
+   <link href="/LinkYard.css" rel="stylesheet">   
+   <title>Link Yard / Account Details</title>
+</head>
+<body>
+
+    <form action="" method="post">
+        <video id="Ad_for_upper_billboard" src= <%= Current_ads.Ad_for_upper_billboard.Path_2_Ad %> loop autoplay muted ></video>
+        <textarea name="Advert" hidden ><%= JSON.stringify( [Current_ads.Ad_for_upper_billboard.Billboard, Current_ads.Ad_for_upper_billboard.ID] ) %></textarea>
+        <button class="Link_2_more_info"> Click here for more information </button>
+    </form>
+    
+    <p class="SettingsBlock" onclick="AccountDetailsBlockDisplay()">* Account details</p>
+    <div class="UpdateBlocks" id="ADB">
+       <p>Email:<input disabled value=<%= User_object.Email %> type="text"></p>
+       <p>User Name:<input disabled value=<%= User_object.User_name %> type="text"></p>
+       <p>Phone Number:<input disabled type="text" value=<%= User_object.Phone_number %> ></p>
+    </div>
+
+
+      <p class="SettingsBlock" onclick="DisplayChangeEmailBlock()" >* Change Email</p>
+      <div class="UpdateBlocks" id="CEB" >
+         <form action="" method="post">
+             <span>Enter new Email: <input  required type="email" name="new_email"></span><br><br>
+             <span>Enter password to confirm: </span> <input type="password" name="_Password"> <br><br>
+             <button >Confirm</button>
+             <br><br>
+             <button type="reset" onclick="RemoveChangeEmailBlock()">Cancel</button>
+         </form>
+      </div>
+      
+ 
+      <p class="SettingsBlock" onclick="DisplayChangePasswordBlock()">* Change Password</p>
+      <div class="UpdateBlocks" id="CPB">
+         <form action="" method="post">
+             <p>Enter current password:<input type="text" name="_Password"></p>
+             <p>Enter new password:<input required type="text" name="new_password1"></p>
+             <p>Enter new password:<input required type="text" name="new_password2"></p>
+             <button>Confirm</button>
+             <br><br>
+             <button type="reset" onclick="RemoveChangePasswordBlock()">Cancel</button>
+         </form>
+     </div>
+      
+     <form action="" method="post">
+      <video id="Ad_for_middle_billboard" src= <%= Current_ads.Ad_for_middle_billboard.Path_2_Ad %> loop autoplay muted ></video>
+      <textarea name="Advert" hidden ><%= JSON.stringify( [Current_ads.Ad_for_middle_billboard.Billboard, Current_ads.Ad_for_middle_billboard.ID] ) %></textarea>
+      <button class="Link_2_more_info"> Click here for more information </button>
+  </form>
+
+ 
+      <p class="SettingsBlock" onclick="DisplayChangeUserNameBlock()">* Change User name</p>
+      <div class="UpdateBlocks" id="CUNB">
+        <form action="" method="post">
+            <p>Enter new UserName:<input required type="text" name="new_username"></p>
+            <span>Enter password to confirm: </span> <input type="password" name="_Password"> <br><br>
+            <button>Confirm</button>
+            <br><br>
+            <button type="reset" onclick="RemoveChangeUserNameBlock()" >Cancel</button>
+        </form>
+     </div>
+      
+ 
+      <p class="SettingsBlock" onclick="DisplayPhoneNumberBlock()" >* Update Phone Number</p>
+      <div class="UpdateBlocks" id="CPNB">
+         <form action="" method="post">
+            <p>Enter new PhoneNumber:<input required type="text" name="new_phonenumber"></p>
+            <span>Enter password to confirm: </span> <input type="password" name="_Password"> <br><br>
+            <button>Confirm</button>
+            <br><br>
+            <button type="reset" onclick="RemovePhoneNumberBlock()" >Cancel</button>
+         </form>
+     </div>
+
+     <div >
+        <form action="" method="post"><input type="text" name="SC" value="Yes" style="display: none;"><button class="SettingsBlock">* Log Out from any other device</button></form>
+     </div>
+
+
+    <form action="" method="post">
+        <video id="Ad_for_lower_billboard" src= <%= Current_ads.Ad_for_lower_billboard.Path_2_Ad %> loop autoplay muted ></video>
+        <textarea name="Advert" hidden ><%= JSON.stringify( [Current_ads.Ad_for_lower_billboard.Billboard, Current_ads.Ad_for_lower_billboard.ID] ) %></textarea>
+        <button class="Link_2_more_info"> Click here for more information </button>
+    </form>
+      
+     <script type="text/javascript" src="../Script.js" ></script>
+   </body>
+</html>
+

@@ -1,0 +1,106 @@
+<html lang="en">
+<head>
+    <title>LinkYard / Profile</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href="../LinkYard.css" rel="stylesheet">
+</head>
+<body>
+
+  <form action="" method="post">
+    <video id="Ad_for_upper_billboard" src= <%= Current_ads.Ad_for_upper_billboard.Path_2_Ad %> loop autoplay muted ></video>
+    <textarea name="Advert" hidden ><%= JSON.stringify( [Current_ads.Ad_for_upper_billboard.Billboard, Current_ads.Ad_for_upper_billboard.ID] ) %></textarea>
+    <button class="Link_2_more_info"> Click here for more information </button>
+  </form>
+
+<div>
+    <img src="/Media/Icons/Menu.jpg" alt="Menu Icon" onclick="ChangeVisibility()" id="MenuIcons"> <span class="Title" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Profile </span>
+    <div id="MenuOptions">
+
+        <p> <a href="Inquries" class="Menu">Help / Inquries </a></p>
+        <p> <a href="/me.<%= User_object.User_name %>" class="Menu" >Preview </a> </p>
+        <p> <a href="Analysis" class="Menu">Stats / Analytics </a> </p>
+        <p> <a class="Menu" onclick="DisplayAddLinkBlock()">Add Link <img src="/Icons/Add.jpg" alt="Add Link" id="AddIcon"></a> </p>
+        <p> <a href="Settings" class="Menu">Settings</a> </p>
+        <p> <a href="Promotions"  class="Menu">Promotions</a> </p>
+        <p> <a href="" class="Menu">Feed back</a> </p>
+        <p> <a onclick="DisplayShareBlock()"  class="Menu">Share Your Link Yard</a> </p>
+        <p> <a href="/" class="Menu" onclick="LogOut()"> Log Out</a> </p>
+    </div>
+
+
+
+  <div id="SLB">
+
+    <p> <span>Your Link Yard:&nbsp;</span><input type="text" id="LTA"  disabled></p>
+    
+    <span style="font-size: 30px;">Share to ::</span><br><br>
+    <button> <a class="ShareButtons" id="Twitter">Twitter</a> </button>
+    <br><br>
+    <button> <a class="ShareButtons" id="Facebook">Facebook</a> </button>
+    <br><br>
+    <button> <a class="ShareButtons" id="Instagram">Instagram</a> </button>
+    <br><br>
+    <button><a  class="ShareButtons" id="Whatsapp">Whatsapp</a></button>
+    <br><br>
+    <button onclick="CopyLink()" >Copy</button> <span id="CopyText">Link Yard copied to clipboard.</span>
+
+  </div>
+       
+  
+
+     <div id="AddLinkBlock">
+        <span>Select Link:</span>
+        <br>
+      <form method="post" action="">
+        <select name="LinkOptions" id="LinkOptions">
+            <option value="facebook">Facebook</option>
+            <option value="twitter">Twitter</option>
+            <option value="instagram">Instagram</option>
+            <option value="CustomLink">Custom Link</option>
+        </select>
+        <br>
+        <br>
+        <span>Username:</span>
+        <br>
+        <input required type="text" name="LUN" id="UserName">
+        <br>
+        <br>
+        <span>Custom Link Name:</span>
+        <br>
+        <input type="text" name="CLN" id="CustomName" placeholder="            Optional!">
+        <br>
+        <br>
+        <button >Add Link</button>
+      </form>
+      
+     </div>
+
+  <form action="" method="post">
+      <video id="Ad_for_middle_billboard" src= <%= Current_ads.Ad_for_middle_billboard.Path_2_Ad %> loop autoplay muted ></video>
+      <textarea name="Advert" hidden ><%= JSON.stringify( [Current_ads.Ad_for_middle_billboard.Billboard, Current_ads.Ad_for_middle_billboard.ID] ) %></textarea>
+      <button class="Link_2_more_info"> Click here for more information </button>
+</form>
+
+     <div style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+      <p>Account Status </p> 
+      <p>Account details: <a href="Account">Click Here</a> </p>
+      <p>Date Joined: <%= User_object.Date_initiated %></p> 
+      <p>Number of links: <%= User_object.Links_length %> </p>
+      <span>Running Ads ? :</span>  
+      <p>Your Links:</p> <% User_object.Links.forEach(Link => { %> <img src="/Icons/bin.png" alt="DeleteLink" style="height: 10px;"> <form action="" method="post" id="LinkForm"> <input  type="text" name ="Title" class="LinkValues" value=<%= Link.Href %> > <button> <%= Link.Title %> </button> </form> <% } ) %> 
+    </div>
+    <br>
+
+    <form action="" method="post">
+      <video id="Ad_for_lower_billboard" src= <%= Current_ads.Ad_for_lower_billboard.Path_2_Ad %> loop autoplay muted ></video>
+      <textarea name="Advert" hidden ><%= JSON.stringify( [Current_ads.Ad_for_lower_billboard.Billboard, Current_ads.Ad_for_lower_billboard.ID] ) %></textarea>
+      <button class="Link_2_more_info"> Click here for more information </button>
+  </form>
+    
+</div>
+<script type="text/javascript" src="../Script.js" ></script>
+</body>
+</html>

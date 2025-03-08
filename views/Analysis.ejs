@@ -1,0 +1,112 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Click on this page to find out inforamtion about visitors on your Link Yard visitors page such as how many visitors viwed your page and which devices they used such as iPhones, androids, desktops or tablets">
+    <meta name="keywords" content="">
+    <link href="../LinkYard.css" rel="stylesheet">
+    <title>Link Yard/ Analytics</title>
+    <style>
+        #StatIdentifiers{
+        text-align: center;
+        font-size: 25px; 
+        font-weight: bold;
+         line-height: 0%;
+        }
+    </style>
+</head>
+<body>
+
+    <form action="" method="post">
+        <video id="Ad_for_upper_billboard" src= <%= Current_ads.Ad_for_upper_billboard.Path_2_Ad %> loop autoplay muted ></video>
+        <textarea name="Advert" hidden ><%= JSON.stringify( [Current_ads.Ad_for_upper_billboard.Billboard, Current_ads.Ad_for_upper_billboard.ID] ) %></textarea>
+        <button class="Link_2_more_info"> Click here for more information </button>
+    </form>
+ 
+    <div class="ParentBlock">
+    <div style="text-align: center;">
+        <p class="Title">Analytics / Stats</p> 
+        <span style="line-height: 20px;">Stand a chance to increase your stats when you advertise your Link Yard</span>
+        <br><br>
+        <a href="Promotions"  style="color: blueviolet; line-height: 50px;">Click here to advertise your Link Yard</a>
+    </div>
+    <br>
+
+    <p id="StatIdentifiers">Visits</p>
+
+     <table id="Table">
+        <thead>
+            <tr>
+                <th>Link</th>
+                <th>Total Visits</th>
+                <th>ToDay's Visits</th>
+                <th>Vs/Hour</th>
+                <th>Vs/Minute</th>
+            </tr>
+        </thead>
+        <tbody id="Visits_Table">
+          
+            <% Links.forEach(link => { %>
+    
+                <tr>
+                  <td id="Link_Title"><%= link.Title %></td>
+                  <td id="Link_Total_Visits"><%= link.TCs %></td>
+                  <td id="Link_ToDay_Visits"><%= link.DCs %></td>
+                  <td id="Link_Visits_Per_Hour"><%= Math.ceil(link.DCs/ (new Date()).getHours()) %></td>
+                  <td id="Link_Visits_Per_Minute"><%= Math.ceil(link.DCs / (new Date()).getMinutes() )  %></td>
+                </tr>
+              <% } ) %>
+
+        </tbody>
+     </table>
+
+     <form action="" method="post">
+        <video id="Ad_for_middle_billboard" src= <%= Current_ads.Ad_for_middle_billboard.Path_2_Ad %> loop autoplay muted ></video>
+        <textarea name="Advert" hidden ><%= JSON.stringify( [Current_ads.Ad_for_middle_billboard.Billboard, Current_ads.Ad_for_middle_billboard.ID] ) %></textarea>
+        <button class="Link_2_more_info"> Click here for more information </button>
+    </form>
+
+<p id="StatIdentifiers">Device Type</p>
+
+     <table id="Table">
+        <thead>
+            <tr>
+                <th>Link</th>
+                <th>Android Vists</th>
+                <th>iPhone Vists</th>
+                <th>Desktop Visits</th>
+                <th>Other Visits</th>
+            </tr>
+        </thead>
+        <tbody>
+          
+            <% Links.forEach(link => { %>
+    
+                <tr>
+                  <td><%= link.Title %></td>
+                  <td><%= link.Android %></td>
+                  <td><%= link.iOS %></td>
+                  <td><%= link.Desktop %></td>
+                  <td><%= link.Others %></td>
+                </tr>
+              <% } ) %>
+
+        </tbody>
+     </table>
+
+
+
+     <br><br>
+
+ </div>
+
+
+<form action="" method="post">
+    <video id="Ad_for_lower_billboard" src= <%= Current_ads.Ad_for_lower_billboard.Path_2_Ad %> loop autoplay muted ></video>
+    <textarea name="Advert" hidden ><%= JSON.stringify( [Current_ads.Ad_for_lower_billboard.Billboard, Current_ads.Ad_for_lower_billboard.ID] ) %></textarea>
+    <button class="Link_2_more_info"> Click here for more information </button>
+</form>
+    
+<script type="text/javascript" src="../Script.js" ></script>
+</body>
+</html>

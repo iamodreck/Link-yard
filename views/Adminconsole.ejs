@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/LinkYard.css">
+    <title>Adverts_Planning_structure</title>
+</head>
+<body>
+
+<form action="" method="post">
+    <video id="Ad_for_upper_billboard" src= <%= Current_ads.Ad_for_upper_billboard.Path_2_Ad %> loop autoplay muted ></video>
+    <textarea name="Advert" hidden ><%= JSON.stringify( [Current_ads.Ad_for_upper_billboard.Billboard, Current_ads.Ad_for_upper_billboard.ID] ) %></textarea>
+    <button class="Link_2_more_info"> Click here for more information </button>
+</form>
+
+    <p>Containment period =  <%= Adverts_contaiment_Stats.Containment_Period %> weeks ( <%= Adverts_contaiment_Stats.Containment_Period * 7 %> days )</p>
+    <h1>Daily Plan</h1>
+    <table>
+        <thead>
+              <tr>
+                <th></th>
+                <th>Upper Billboard</th>
+                <th>Middle Billboard</th>
+                <th>Lower Billboard</th>
+                <th>Email Billboard</th>
+              </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Active Container</td>
+            <td> <%= Adverts_contaiment_Stats.Daily.Upper_Billboard.Active_Container %> </td>
+            <td> <%= Adverts_contaiment_Stats.Daily.Middle_Billboard.Active_Container %> </td>
+            <td> <%= Adverts_contaiment_Stats.Daily.Lower_Billboard.Active_Container %> </td>
+            <td> <%= Adverts_contaiment_Stats.Daily.Email_Billboard.Active_Container %> </td>
+          </tr>
+
+          <tr>
+            <td>General Container</td>
+            <td> <%= Adverts_contaiment_Stats.Daily.Upper_Billboard.General_Container %> </td>
+            <td> <%= Adverts_contaiment_Stats.Daily.Middle_Billboard.General_Container %> </td>
+            <td> <%= Adverts_contaiment_Stats.Daily.Lower_Billboard.General_Container %> </td>
+            <td> <%= Adverts_contaiment_Stats.Daily.Email_Billboard.General_Container %> </td>
+          </tr>
+
+          <tr>
+            <td>Pending Container</td>
+            <td> <%= Adverts_contaiment_Stats.Daily.Upper_Billboard.Pending_Container %> </td>
+            <td> <%= Adverts_contaiment_Stats.Daily.Middle_Billboard.Pending_Container %> </td>
+            <td> <%= Adverts_contaiment_Stats.Daily.Lower_Billboard.Pending_Container %> </td>
+            <td> <%= Adverts_contaiment_Stats.Daily.Email_Billboard.Pending_Container %> </td>
+          </tr>
+
+          <form action="" method="post">
+            <video id="Ad_for_middle_billboard" src= <%= Current_ads.Ad_for_middle_billboard.Path_2_Ad %> loop autoplay muted ></video>
+            <textarea name="Advert" hidden ><%= JSON.stringify( [Current_ads.Ad_for_middle_billboard.Billboard, Current_ads.Ad_for_middle_billboard.ID] ) %></textarea>
+            <button class="Link_2_more_info"> Click here for more information </button>
+        </form>
+
+          <tr>
+            <td>Condition </td>
+            <td> < <%= Adverts_contaiment_Stats.Daily.Upper_Billboard.Pending_Container %> </td>
+            <td> < <%= Adverts_contaiment_Stats.Daily.Middle_Billboard.Pending_Container %> </td>
+            <td> < <%= Adverts_contaiment_Stats.Daily.Lower_Billboard.Pending_Container %> </td>
+            <td> < <%= Adverts_contaiment_Stats.Daily.Email_Billboard.Pending_Container %> </td>
+          </tr>
+
+        </tbody>
+    </table>
+
+    <h1>Weekly Plan</h1>
+    <table>
+      <thead>
+            <tr>
+              <th></th>
+              <th>Upper Billboard</th>
+              <th>Middle Billboard</th>
+              <th>Lower Billboard</th>
+              <th>Email Billboard</th>
+            </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Active Container</td>
+          <td> <%= Adverts_contaiment_Stats.Weekly.Upper_Billboard.Active_Container %> </td>
+          <td> <%= Adverts_contaiment_Stats.Weekly.Middle_Billboard.Active_Container %> </td>
+          <td> <%= Adverts_contaiment_Stats.Weekly.Lower_Billboard.Active_Container %> </td>
+          <td> <%= Adverts_contaiment_Stats.Weekly.Email_Billboard.Active_Container %> </td>
+        </tr>
+
+        <tr>
+          <td>General Container</td>
+          <td> <%= Adverts_contaiment_Stats.Weekly.Upper_Billboard.General_Container %> </td>
+          <td> <%= Adverts_contaiment_Stats.Weekly.Middle_Billboard.General_Container %> </td>
+          <td> <%= Adverts_contaiment_Stats.Weekly.Lower_Billboard.General_Container %> </td>
+          <td> <%= Adverts_contaiment_Stats.Weekly.Email_Billboard.General_Container %> </td>
+        </tr>
+
+        <tr>
+          <td>Pending Container</td>
+          <td> <%= Adverts_contaiment_Stats.Weekly.Upper_Billboard.Pending_Container %> </td>
+          <td> <%= Adverts_contaiment_Stats.Weekly.Middle_Billboard.Pending_Container %> </td>
+          <td> <%= Adverts_contaiment_Stats.Weekly.Lower_Billboard.Pending_Container %> </td>
+          <td> <%= Adverts_contaiment_Stats.Weekly.Email_Billboard.Pending_Container %> </td>
+        </tr>
+
+        <tr>
+          <td>Condition </td>
+          <td> < <%= Adverts_contaiment_Stats.Weekly.Upper_Billboard.Pending_Container %> </td>
+          <td> < <%= Adverts_contaiment_Stats.Weekly.Middle_Billboard.Pending_Container %> </td>
+          <td> < <%= Adverts_contaiment_Stats.Weekly.Lower_Billboard.Pending_Container %> </td>
+          <td> < <%= Adverts_contaiment_Stats.Weekly.Email_Billboard.Pending_Container %> </td>
+        </tr>
+
+      </tbody>
+  </table>
+
+  <form action="" method="post">
+    <video id="Ad_for_lower_billboard" src= <%= Current_ads.Ad_for_lower_billboard.Path_2_Ad %> loop autoplay muted ></video>
+    <textarea name="Advert" hidden ><%= JSON.stringify( [Current_ads.Ad_for_lower_billboard.Billboard, Current_ads.Ad_for_lower_billboard.ID] ) %></textarea>
+    <button class="Link_2_more_info"> Click here for more information </button>
+</form>
+</body>
+</html>

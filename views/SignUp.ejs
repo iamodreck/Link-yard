@@ -1,0 +1,59 @@
+<html lang="en">
+<head>
+    <title>Link Yard / Sign Up</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href="../LinkYard.css" rel="stylesheet">
+</head>
+<body>
+
+    <form action="" method="post">
+        <video id="Ad_for_upper_billboard" src= <%= Current_ads.Ad_for_upper_billboard.Path_2_Ad %> loop autoplay muted ></video>
+        <textarea name="Advert" hidden ><%= JSON.stringify( [Current_ads.Ad_for_upper_billboard.Billboard, Current_ads.Ad_for_upper_billboard.ID] ) %></textarea>
+        <button class="Link_2_more_info"> Click here for more information </button>
+    </form>
+
+    <p>&nbsp;</p>
+    <p class="Title" >Sign Up</p>
+    <form method="post" action="">
+    <span>Email: </span>
+    <br>
+    <input type="email" id="SUE" onchange="CheckEmail()" required name="SUE">
+    <br>
+    <br>
+    <span>Password: </span>
+    <br>
+    <input required type="password" name="SUP" id="SUP">
+    <br>
+    <br>
+
+    <span>User Name:</span>
+    <br>
+    <input type="text" required onchange="CheckUserName()" name="SUUN" id="SUUN">
+    <br>
+    <br>
+    <button id="SUB">Sign Up</button>
+    </form>
+    
+    <form action="" method="post">
+        <video id="Ad_for_middle_billboard" src= <%= Current_ads.Ad_for_middle_billboard.Path_2_Ad %> loop autoplay muted ></video>
+        <textarea name="Advert" hidden ><%= JSON.stringify( [Current_ads.Ad_for_middle_billboard.Billboard, Current_ads.Ad_for_middle_billboard.ID] ) %></textarea>
+        <button class="Link_2_more_info"> Click here for more information </button>
+    </form>
+
+     <span>Already have an account? <a href="SignIn" > Sign In</a></span>
+
+     <form action="" method="post">
+        <video id="Ad_for_lower_billboard" src= <%= Current_ads.Ad_for_lower_billboard.Path_2_Ad %> loop autoplay muted ></video>
+        <textarea name="Advert" hidden ><%= JSON.stringify( [Current_ads.Ad_for_lower_billboard.Billboard, Current_ads.Ad_for_lower_billboard.ID] ) %></textarea>
+        <button class="Link_2_more_info"> Click here for more information </button>
+    </form>
+    
+     <script type="text/javascript" src="Script.js" ></script>
+     <script>
+        alert("After the sign Up, you're advised to add a Phone Number in oder to boost the sescurity of your account and this can be archived at the account details page")
+    </script>
+</body>
+</html>
